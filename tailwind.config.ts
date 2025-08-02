@@ -26,7 +26,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					dark: 'hsl(var(--chat-primary-dark))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -52,6 +53,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				chat: {
+					primary: 'hsl(var(--chat-primary))',
+					'primary-dark': 'hsl(var(--chat-primary-dark))',
+					'bubble-sent': 'hsl(var(--chat-bubble-sent))',
+					'bubble-received': 'hsl(var(--chat-bubble-received))',
+					sidebar: 'hsl(var(--chat-sidebar))'
+				},
+				online: 'hsl(var(--online-indicator))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -88,7 +97,33 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'message-in': 'messageIn 0.3s ease-out',
+				'pulse-glow': 'pulseGlow 2s infinite'
+			},
+			keyframes: {
+				messageIn: {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				pulseGlow: {
+					'0%, 100%': { boxShadow: '0 0 5px hsl(var(--online-indicator))' },
+					'50%': { boxShadow: '0 0 20px hsl(var(--online-indicator))' }
+				}
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-chat': 'var(--gradient-chat)',
+				'gradient-message': 'var(--gradient-message)'
+			},
+			boxShadow: {
+				'message': 'var(--shadow-message)',
+				'card-soft': 'var(--shadow-card)',
+				'glow': 'var(--shadow-glow)'
+			},
+			transitionTimingFunction: {
+				'smooth': 'var(--transition-smooth)',
+				'bounce': 'var(--transition-bounce)'
 			}
 		}
 	},
