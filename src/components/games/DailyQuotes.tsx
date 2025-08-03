@@ -38,7 +38,7 @@ export const DailyQuotes = () => {
       .from('quotes')
       .select('*')
       .eq('day_of_year', dayOfYear)
-      .single();
+      .maybeSingle();
 
     if (error) {
       console.error('Error fetching today quote:', error);
@@ -59,7 +59,7 @@ export const DailyQuotes = () => {
       .from('quotes')
       .select('*')
       .eq('day_of_year', randomDay)
-      .single();
+      .maybeSingle();
 
     if (error) {
       console.error('Error fetching random quote:', error);
@@ -68,7 +68,7 @@ export const DailyQuotes = () => {
         .from('quotes')
         .select('*')
         .eq('day_of_year', 1)
-        .single();
+        .maybeSingle();
       setRandomQuote(fallbackData);
     } else {
       setRandomQuote(data);
