@@ -261,6 +261,39 @@ export type Database = {
         }
         Relationships: []
       }
+      quotes: {
+        Row: {
+          author_ar: string | null
+          author_en: string | null
+          created_at: string
+          day_of_year: number
+          id: string
+          text_ar: string
+          text_en: string
+          updated_at: string
+        }
+        Insert: {
+          author_ar?: string | null
+          author_en?: string | null
+          created_at?: string
+          day_of_year: number
+          id?: string
+          text_ar: string
+          text_en: string
+          updated_at?: string
+        }
+        Update: {
+          author_ar?: string | null
+          author_en?: string | null
+          created_at?: string
+          day_of_year?: number
+          id?: string
+          text_ar?: string
+          text_en?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       room_members: {
         Row: {
           id: string
