@@ -1,73 +1,49 @@
-# Welcome to your Lovable project
+# Bilel's Chatter Box
 
-## Project info
+A real-time communication workspace that combines room-based chat, user profiles, reactions, and lightweight multiplayer games.
 
-**URL**: https://lovable.dev/projects/86a2204e-2dc2-47b2-bb76-0152881defb5
+## Overview
 
-## How can I edit this code?
+Bilel's Chatter Box is a responsive social application built around authenticated conversations. Users can join rooms, exchange messages, see activity updates, manage profiles, and start chess or tic-tac-toe sessions from the chat experience.
 
-There are several ways of editing your application.
+## Highlights
 
-**Use Lovable**
+- Real-time rooms and message updates.
+- Authentication and profile management.
+- Reactions and typing/activity indicators.
+- Integrated chess and tic-tac-toe game flows.
+- Responsive chat layout with mobile support.
+- Typed data access through Supabase integrations.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/86a2204e-2dc2-47b2-bb76-0152881defb5) and start prompting.
+## Technology
 
-Changes made via Lovable will be committed automatically to this repo.
+- React 18 and TypeScript
+- Vite
+- Tailwind CSS and shadcn/ui
+- Supabase authentication, realtime subscriptions, and persistence
+- Zod, date-fns, and Lucide React
 
-**Use your preferred IDE**
+## Local development
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Copy `.env.example` to `.env` and configure the required Supabase values. Keep local environment files and private service credentials out of version control.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Project structure
 
-**Use GitHub Codespaces**
+Chat UI components are organized under `src/components/chat/`, game experiences under `src/components/games/`, and authentication and application state under `src/contexts/` and `src/components/auth/`.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Status
 
-## What technologies are used for this project?
+A portfolio project demonstrating realtime application patterns, authenticated UX, and interactive multiplayer features.
 
-This project is built with:
+## License
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+No license has been declared yet. Add a license before accepting external contributions or redistributing the project.
 
-## How can I deploy this project?
+## Author
 
-Simply open [Lovable](https://lovable.dev/projects/86a2204e-2dc2-47b2-bb76-0152881defb5) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+**Bilel JM** — [GitHub](https://github.com/bilel11111)
